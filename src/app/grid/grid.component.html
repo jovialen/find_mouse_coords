@@ -1,9 +1,15 @@
 <div class="w-full h-full flex">
   <div class="flex flex-col w-full h-full">
-    <div *ngFor="let k of [].constructor(gridMajorHeight)" class="flex w-full grow">
-      <div *ngFor="let kk of [].constructor(gridMajorWidth)" class="flex flex-col grow grid-major-block">
-        <div *ngFor="let kkk of [].constructor(gridMinorHeight)" class="flex w-full grow">
-          <div *ngFor="let kkkk of [].constructor(gridMinorWidth)" class="flex flex-col grow grid-minor-block">
+    <div *ngFor="let k of [].constructor(gridMajorHeight); let mar = index" class="flex w-full grow">
+      <div *ngFor="let kk of [].constructor(gridMajorWidth); let mac = index" class="flex flex-col grow grid-major-block">
+        <div *ngFor="let kkk of [].constructor(gridMinorHeight); let mir = index" class="flex w-full grow">
+          <div
+            *ngFor="let kkkk of [].constructor(gridMinorWidth); let mic = index"
+            [class.red]="((mar * gridMajorWidth + mac + (mir * gridMinorWidth + mic) * gridMajorWidth * gridMajorHeight) - 500) % 211 === 0"
+            [class.blue]="((mar * gridMajorWidth + mac + (mir * gridMinorWidth + mic) * gridMajorWidth * gridMajorHeight) - 500) % 307 === 0"
+            [class.yellow]="((mar * gridMajorWidth + mac + (mir * gridMinorWidth + mic) * gridMajorWidth * gridMajorHeight) - 500) % 347 === 0"
+            class="flex flex-col grow grid-minor-block"
+          >
           </div>
         </div>
       </div>

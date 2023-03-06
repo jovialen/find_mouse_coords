@@ -5,3 +5,18 @@
 .grid-minor-block {
   border: 1px lightgray dotted;
 }
+
+.red {
+  border-style: solid;
+  @apply border-red-500;
+}
+
+.blue {
+  border-style: solid;
+  @apply border-blue-500;
+}
+
+.yellow {
+  border-style: solid;
+  @apply border-yellow-500;
+}

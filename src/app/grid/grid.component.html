@@ -1,0 +1,12 @@
+<div class="w-full h-full flex">
+  <div class="flex flex-col w-full h-full">
+    <div *ngFor="let k of [].constructor(gridMajorHeight)" class="flex w-full grow">
+      <div *ngFor="let kk of [].constructor(gridMajorWidth)" class="flex flex-col grow grid-major-block">
+        <div *ngFor="let kkk of [].constructor(gridMinorHeight)" class="flex w-full grow">
+          <div *ngFor="let kkkk of [].constructor(gridMinorWidth)" class="flex flex-col grow grid-minor-block">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

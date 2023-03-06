@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { GridPreviewComponent } from './grid-preview/grid-preview.component';
 import { GridGameComponent } from './grid-game/grid-game.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { GridComponent } from './grid/grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GridPreviewComponent,
     GridGameComponent,
-    NavigationComponent
+    NavigationComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule,

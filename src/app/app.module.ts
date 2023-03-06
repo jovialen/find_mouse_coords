@@ -7,6 +7,7 @@ import { GridPreviewComponent } from './grid-preview/grid-preview.component';
 import { GridGameComponent } from './grid-game/grid-game.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { GridComponent } from './grid/grid.component';
+import { InfoBoxComponent } from './info-box/info-box.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { GridComponent } from './grid/grid.component';
     GridPreviewComponent,
     GridGameComponent,
     NavigationComponent,
-    GridComponent
+    GridComponent,
+    InfoBoxComponent
   ],
   imports: [
     BrowserModule,

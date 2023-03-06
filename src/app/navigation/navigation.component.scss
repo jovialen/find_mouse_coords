@@ -1,0 +1,8 @@
+nav > ul {
+  list-style: none; /* Hide the bullet-points */
+}
+
+/* Hide the currently active route */
+.active {
+  display: none;
+}

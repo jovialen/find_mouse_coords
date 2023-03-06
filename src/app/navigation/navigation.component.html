@@ -3,11 +3,14 @@
     <h1 class="font-extrabold leading-none tracking-tight text-gray-900 text-3xl">
       Find the <mark class="px-2 text-white bg-red-500 rounded">mouse</mark> game
     </h1>
-    <button class="bg-blue-500 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded transition-colors">
-      <ul>
-        <li><a routerLinkActive="active" routerLink="preview">Preview the grid</a></li>
-        <li><a routerLinkActive="active" routerLink="game">Play the game</a></li>
-      </ul>
-    </button>
+
+    <div class="routing-buttons">
+      <button routerLinkActive="active" class="bg-blue-500 routing-btn text-white font-bold py-2 px-4 rounded transition-colors">
+        <a routerLink="preview">Preview the grid</a>
+      </button>
+      <button routerLinkActive="active" class="bg-green-500 routing-btn text-white font-bold py-2 px-4 rounded transition-colors">
+        <a routerLink="game">Play the game</a>
+      </button>
+    </div>
   </div>
 </nav>

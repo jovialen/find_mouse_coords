@@ -1,22 +1,35 @@
+/* The big squares in notebooks have thicker lines, here by making them solid */
 .grid-major-block {
   border: 1px lightgray solid;
 }
 
+/* The smaller squares have lighter lines, here by making them dotted */
 .grid-minor-block {
   border: 1px lightgray dotted;
 }
 
-.red {
+/* Make the color more visible with solid lines. */
+.red,
+.blue,
+.yellow,
+.green {
   border-style: solid;
+}
+
+/* Apply color to squares */
+
+.red {
   @apply border-red-500;
 }
 
 .blue {
-  border-style: solid;
   @apply border-blue-500;
 }
 
 .yellow {
-  border-style: solid;
   @apply border-yellow-500;
+}
+
+.green {
+  @apply border-green-500;
 }

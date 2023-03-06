@@ -5,4 +5,10 @@ nav > ul {
 /* Hide the currently active route */
 .active {
   display: none;
+  transition: none;
+}
+
+/* Unify router button hover color */
+.routing-buttons:hover > .routing-btn {
+  @apply bg-yellow-500;
 }

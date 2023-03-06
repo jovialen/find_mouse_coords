@@ -48,4 +48,8 @@ export class GridComponent {
   isYellow(mar: number, mac: number, mir: number, mic: number): boolean {
     return this.cellIndex(mar, mac, mir, mic) % 347 === 0;
   }
+
+  isGreen(mar: number, mac: number, mir: number, mic: number): boolean {
+    return this.cellIndex(mar, mac, mir, mic) % 397 === 0;
+  }
 }

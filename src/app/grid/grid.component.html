@@ -5,9 +5,9 @@
         <div *ngFor="let kkk of [].constructor(gridMinorHeight); let mir = index" class="flex w-full grow">
           <div
             *ngFor="let kkkk of [].constructor(gridMinorWidth); let mic = index"
-            [class.red]="((mar * gridMajorWidth + mac + (mir * gridMinorWidth + mic) * gridMajorWidth * gridMajorHeight) - 500) % 211 === 0"
-            [class.blue]="((mar * gridMajorWidth + mac + (mir * gridMinorWidth + mic) * gridMajorWidth * gridMajorHeight) - 500) % 307 === 0"
-            [class.yellow]="((mar * gridMajorWidth + mac + (mir * gridMinorWidth + mic) * gridMajorWidth * gridMajorHeight) - 500) % 347 === 0"
+            [class.red]="this.isRed(mar, mac, mir, mic)"
+            [class.blue]="this.isBlue(mar, mac, mir, mic)"
+            [class.yellow]="this.isYellow(mar, mac, mir, mic)"
             class="flex flex-col grow grid-minor-block"
           >
           </div>

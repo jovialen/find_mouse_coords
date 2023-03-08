@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ElementRef } from '@angular/core';
 
 import { InfoBoxService } from '../info-box.service';
 
@@ -11,7 +11,7 @@ import { InfoBoxService } from '../info-box.service';
   }
 })
 export class GridPreviewComponent {
-  constructor(private infoBoxService: InfoBoxService) {}
+  constructor(private elementRef: ElementRef, private infoBoxService: InfoBoxService) {}
 
   ngOnInit() {
     this.infoBoxService.clear();
@@ -19,9 +19,16 @@ export class GridPreviewComponent {
 
   @HostListener("mousemove", ["$event"])
   onMouseMove(e: MouseEvent) {
-    let x = e.clientX;
-    let y = e.clientY;
+    let offset_x = this.elementRef.nativeElement.offsetLeft;
+    let offset_y = this.elementRef.nativeElement.offsetTop;
+
+    let x = e.clientX - offset_x;
+    let y = e.clientY - offset_y;
 
     this.infoBoxService.setContent(`Mouse at X: ${x}, Y: ${y}`);
+  }
+
+  onMouseLeave() {
+    this.infoBoxService.clear();
   }
 }
